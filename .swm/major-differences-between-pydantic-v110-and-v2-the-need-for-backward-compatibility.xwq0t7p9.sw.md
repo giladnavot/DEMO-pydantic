@@ -31,7 +31,7 @@ VERSION = '2.8.0a1'
 
 # The role of the backward compatibility layer
 
-The <SwmToken path="/pyproject.toml" pos="211:0:0" line-data="omit = [&#39;pydantic/deprecated/*&#39;, &#39;pydantic/v1/*&#39;]">`omit`</SwmToken> configuration in <SwmPath>[pyproject.toml](/pyproject.toml)</SwmPath> is used to exclude certain directories from coverage. This includes the <SwmPath>[pydantic/deprecated//](/pydantic/deprecated//)</SwmPath> and <SwmPath>[pydantic/v1//](/pydantic/v1//)</SwmPath> directories, which likely contain code that is only relevant for Pydantic V1.10 and is not compatible with V2.
+The <SwmToken path="/pyproject.toml" pos="211:0:0" line-data="omit = [&#39;pydantic/deprecated/*&#39;, &#39;pydantic/v1/*&#39;]">`omit`</SwmToken> configuration in <SwmPath>[pyproject.toml](/pyproject.toml)</SwmPath> is used to exclude certain directories from coverage. This includes the <SwmPath>[pydantic/deprecated/](/pydantic/deprecated/)</SwmPath> and <SwmPath>[pydantic/v1/](/pydantic/v1/)</SwmPath> directories, which likely contain code that is only relevant for Pydantic V1.10 and is not compatible with V2.
 
 ```toml
 omit = ['pydantic/deprecated/*', 'pydantic/v1/*']
