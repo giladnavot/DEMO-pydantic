@@ -39,7 +39,6 @@ Advanced data validation in Pydantic allows for more complex validation logic to
 Type handling in Pydantic involves the use of Python's type hints to validate data. Pydantic provides several built-in types and allows for the creation of custom types. The library uses these types to validate data when creating instances of data classes. This ensures that the data conforms to the expected structure and type, reducing the likelihood of runtime errors due to incorrect data types or structures.
 
 - <SwmLink doc-title="Getting Started with Type Handling">[Getting Started with Type Handling](/.swm/getting-started-with-type-handling.n25dluos.sw.md)</SwmLink>
-- <SwmLink doc-title="\\\\\\\_SecretField Class Overview">[\_SecretField Class Overview](/.swm/_secretfield-class-overview.3mwn1.sw.md)</SwmLink>
 - <SwmLink doc-title="Overview of EncodedBytes">[Overview of EncodedBytes](/.swm/overview-of-encodedbytes.7d4t8.sw.md)</SwmLink>
 - <SwmLink doc-title="Understanding Basic Type Definitions">[Understanding Basic Type Definitions](/.swm/understanding-basic-type-definitions.mdgf21vb.sw.md)</SwmLink>
 - <SwmLink doc-title="Getting started with Complex Type Definitions">[Getting started with Complex Type Definitions](/.swm/getting-started-with-complex-type-definitions.sdbvob5y.sw.md)</SwmLink>
@@ -78,8 +77,7 @@ The <SwmPath>[pydantic/plugin/](/pydantic/plugin/)</SwmPath> directory contains 
 
 ### Experimental
 
-The <SwmPath>[pydantic/experimental/](/pydantic/experimental/)</SwmPath> directory contains experimental features of the Pydantic library.
-Experimental features in Pydantic are potential new functionalities that are currently being tested and refined. They are not stable and may undergo significant changes or even removal. These features are housed in the 'experimental' module of Pydantic. This module is explicitly marked as experimental to warn users about the potential instability and changes in its features. The code in this module, such as the pipeline API functionality, is subject to change and should be used with caution.
+The <SwmPath>[pydantic/experimental/](/pydantic/experimental/)</SwmPath> directory contains experimental features of the Pydantic library. Experimental features in Pydantic are potential new functionalities that are currently being tested and refined. They are not stable and may undergo significant changes or even removal. These features are housed in the 'experimental' module of Pydantic. This module is explicitly marked as experimental to warn users about the potential instability and changes in its features. The code in this module, such as the pipeline API functionality, is subject to change and should be used with caution.
 
 - <SwmLink doc-title="Introduction to Pydantic Experimental Features">[Introduction to Pydantic Experimental Features](/.swm/introduction-to-pydantic-experimental-features.sokvvb1b.sw.md)</SwmLink>
 
