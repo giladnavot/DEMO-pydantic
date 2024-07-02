@@ -62,35 +62,35 @@ end
 %%   make_v1_generic_root_validator:::mainFlowStyle --> validator
 %%   validator:::mainFlowStyle --> <SwmToken path="/pydantic/type_adapter.py" pos="275:3:3" line-data="    def _init_core_attrs(self, rebuild_mocks: bool) -&gt; None:">`_init_core_attrs`</SwmToken>
 %%   _init_core_attrs:::mainFlowStyle --> <SwmToken path="/pydantic/type_adapter.py" pos="54:2:2" line-data="def _get_schema(type_: Any, config_wrapper: _config.ConfigWrapper, parent_depth: int) -&gt; CoreSchema:">`_get_schema`</SwmToken>
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   _get_schema:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="446:3:3" line-data="    def clean_schema(self, schema: CoreSchema) -&gt; CoreSchema:">`clean_schema`</SwmToken>
 %% end
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   clean_schema:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="448:5:5" line-data="        schema = simplify_schema_references(schema)">`simplify_schema_references`</SwmToken>
 %% end
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   clean_schema:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="447:7:7" line-data="        schema = self.collect_definitions(schema)">`collect_definitions`</SwmToken>
 %% end
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   clean_schema:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="451:7:7" line-data="        schema = _discriminated_union.apply_discriminators(schema)">`apply_discriminators`</SwmToken>
 %% end
 %%   <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="448:5:5" line-data="        schema = simplify_schema_references(schema)">`simplify_schema_references`</SwmToken> --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="461:5:5" line-data="        return core_schema.definitions_schema(">`definitions_schema`</SwmToken>
 %%   <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="461:5:5" line-data="        return core_schema.definitions_schema(">`definitions_schema`</SwmToken> --> <SwmToken path="/pydantic/json_schema.py" pos="445:3:3" line-data="    def generate_inner(self, schema: CoreSchemaOrField) -&gt; JsonSchemaValue:  # noqa: C901">`generate_inner`</SwmToken>
 %%   <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="447:7:7" line-data="        schema = self.collect_definitions(schema)">`collect_definitions`</SwmToken> --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="461:5:5" line-data="        return core_schema.definitions_schema(">`definitions_schema`</SwmToken>
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   apply_discriminators:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="447:7:7" line-data="        schema = self.collect_definitions(schema)">`collect_definitions`</SwmToken>
 %% end
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   apply_discriminators:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="431:5:5" line-data="            return _discriminated_union.apply_discriminator(">`apply_discriminator`</SwmToken>
 %% end
 %%   apply_discriminator:::mainFlowStyle --> <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken>
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   apply_discriminator:::mainFlowStyle --> apply
 %% end
 %%   <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken> --> <SwmToken path="/pydantic/types.py" pos="2841:7:7" line-data="            original_schema = core_schema.union_schema([original_schema])">`union_schema`</SwmToken>
 %%   <SwmToken path="/pydantic/types.py" pos="2841:7:7" line-data="            original_schema = core_schema.union_schema([original_schema])">`union_schema`</SwmToken> --> <SwmToken path="/pydantic/json_schema.py" pos="445:3:3" line-data="    def generate_inner(self, schema: CoreSchemaOrField) -&gt; JsonSchemaValue:  # noqa: C901">`generate_inner`</SwmToken>
 %%   apply:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="1090:3:3" line-data="    def nullable_schema(self, schema: core_schema.NullableSchema) -&gt; JsonSchemaValue:">`nullable_schema`</SwmToken>
-%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%% subgraph <SwmPath>[pydantic/\_internal/](/pydantic/_internal/)</SwmPath>
 %%   apply:::mainFlowStyle --> <SwmToken path="/pydantic/types.py" pos="2839:12:12" line-data="            # `pydantic._internal._discriminated_union._ApplyInferredDiscriminator._apply_to_root`, namely,">`_apply_to_root`</SwmToken>
 %% end
 %%   <SwmToken path="/pydantic/json_schema.py" pos="1090:3:3" line-data="    def nullable_schema(self, schema: core_schema.NullableSchema) -&gt; JsonSchemaValue:">`nullable_schema`</SwmToken> --> <SwmToken path="/pydantic/json_schema.py" pos="445:3:3" line-data="    def generate_inner(self, schema: CoreSchemaOrField) -&gt; JsonSchemaValue:  # noqa: C901">`generate_inner`</SwmToken>
