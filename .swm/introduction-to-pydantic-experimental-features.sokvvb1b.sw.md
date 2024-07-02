@@ -1,7 +1,7 @@
 ---
 title: Introduction to Pydantic Experimental Features
 ---
-The <SwmPath>[pydantic/experimental//](/pydantic/experimental//)</SwmPath> directory in the DEMO-pydantic repository contains experimental features of the Pydantic library. These features are still under development and may not be stable or fully documented. The directory includes Python files like '[pipeline.py](http://pipeline.py)' and '**init**.py'. The experimental features are intended for testing and feedback purposes, and developers are warned about their experimental nature through the <SwmToken path="/pydantic/experimental/__init__.py" pos="5:8:8" line-data="from pydantic.warnings import PydanticExperimentalWarning">`PydanticExperimentalWarning`</SwmToken> warning.
+The <SwmPath>[pydantic/experimental/](/pydantic/experimental/)</SwmPath> directory in the DEMO-pydantic repository contains experimental features of the Pydantic library. These features are still under development and may not be stable or fully documented. The directory includes Python files like '[pipeline.py](http://pipeline.py)' and '**init**.py'. The experimental features are intended for testing and feedback purposes, and developers are warned about their experimental nature through the <SwmToken path="/pydantic/experimental/__init__.py" pos="5:8:8" line-data="from pydantic.warnings import PydanticExperimentalWarning">`PydanticExperimentalWarning`</SwmToken> warning.
 
 <SwmSnippet path="/pydantic/experimental/pipeline.py" line="20">
 
@@ -43,9 +43,9 @@ warnings.warn(
 
 </SwmSnippet>
 
-# Functions in <SwmPath>[pydantic/experimental//](/pydantic/experimental//)</SwmPath>
+# Functions in <SwmPath>[pydantic/experimental/](/pydantic/experimental/)</SwmPath>
 
-This section will provide an overview of the functions in the <SwmPath>[pydantic/experimental//](/pydantic/experimental//)</SwmPath> directory, focusing on the [pipeline.py](http://pipeline.py) file.
+This section will provide an overview of the functions in the <SwmPath>[pydantic/experimental/](/pydantic/experimental/)</SwmPath> directory, focusing on the [pipeline.py](http://pipeline.py) file.
 
 <SwmSnippet path="/pydantic/experimental/pipeline.py" line="113">
 
