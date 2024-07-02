@@ -53,6 +53,49 @@ end
 
  classDef mainFlowStyle color:#000000,fill:#7CB9F4
   classDef rootsStyle color:#000000,fill:#00FFF4
+
+%% Swimm:
+%% graph TD;
+%%   update_forward_refs:::mainFlowStyle --> <SwmToken path="/pydantic/main.py" pos="487:3:3" line-data="    def model_rebuild(">`model_rebuild`</SwmToken>
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   model_rebuild:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_model_construction.py" pos="487:2:2" line-data="def complete_model_class(">`complete_model_class`</SwmToken>
+%% end
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   complete_model_class:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="446:3:3" line-data="    def clean_schema(self, schema: CoreSchema) -&gt; CoreSchema:">`clean_schema`</SwmToken>
+%% end
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   clean_schema:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="448:5:5" line-data="        schema = simplify_schema_references(schema)">`simplify_schema_references`</SwmToken>
+%% end
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   clean_schema:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="447:7:7" line-data="        schema = self.collect_definitions(schema)">`collect_definitions`</SwmToken>
+%% end
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   clean_schema:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="451:7:7" line-data="        schema = _discriminated_union.apply_discriminators(schema)">`apply_discriminators`</SwmToken>
+%% end
+%%   <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="448:5:5" line-data="        schema = simplify_schema_references(schema)">`simplify_schema_references`</SwmToken> --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="461:5:5" line-data="        return core_schema.definitions_schema(">`definitions_schema`</SwmToken>
+%%   <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="447:7:7" line-data="        schema = self.collect_definitions(schema)">`collect_definitions`</SwmToken> --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="461:5:5" line-data="        return core_schema.definitions_schema(">`definitions_schema`</SwmToken>
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   apply_discriminators:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="447:7:7" line-data="        schema = self.collect_definitions(schema)">`collect_definitions`</SwmToken>
+%% end
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   apply_discriminators:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="431:5:5" line-data="            return _discriminated_union.apply_discriminator(">`apply_discriminator`</SwmToken>
+%% end
+%%   apply_discriminator:::mainFlowStyle --> <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken>
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   apply_discriminator:::mainFlowStyle --> apply
+%% end
+%%   <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken> --> <SwmToken path="/pydantic/json_schema.py" pos="1109:3:3" line-data="    def union_schema(self, schema: core_schema.UnionSchema) -&gt; JsonSchemaValue:">`union_schema`</SwmToken>
+%%   apply:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="1090:3:3" line-data="    def nullable_schema(self, schema: core_schema.NullableSchema) -&gt; JsonSchemaValue:">`nullable_schema`</SwmToken>
+%% subgraph <SwmPath>[pydantic/\_internal//](/pydantic/_internal//)</SwmPath>
+%%   apply:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_discriminated_union.py" pos="191:7:7" line-data="        schema = self._apply_to_root(schema)">`_apply_to_root`</SwmToken>
+%% end
+%%   _apply_to_root:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="1109:3:3" line-data="    def union_schema(self, schema: core_schema.UnionSchema) -&gt; JsonSchemaValue:">`union_schema`</SwmToken>
+%%   _apply_to_root:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="1134:3:3" line-data="    def tagged_union_schema(self, schema: core_schema.TaggedUnionSchema) -&gt; JsonSchemaValue:">`tagged_union_schema`</SwmToken>
+%%   tagged_union_schema:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="445:3:3" line-data="    def generate_inner(self, schema: CoreSchemaOrField) -&gt; JsonSchemaValue:  # noqa: C901">`generate_inner`</SwmToken>
+%%   generate_inner:::mainFlowStyle --> ...
+%% 
+%%  classDef mainFlowStyle color:#000000,fill:#7CB9F4
+%%   classDef rootsStyle color:#000000,fill:#00FFF4
 ```
 
 <SwmSnippet path="/pydantic/main.py" line="487">
@@ -61,7 +104,7 @@ end
 
 # Rebuilding the model
 
-The function `model_rebuild` is used to rebuild the Pydantic-core schema for the model. This is necessary when one of the annotations is a ForwardRef which could not be resolved during the initial attempt to build the schema, and automatic rebuilding fails.
+The function <SwmToken path="/pydantic/main.py" pos="487:3:3" line-data="    def model_rebuild(">`model_rebuild`</SwmToken> is used to rebuild the <SwmToken path="/pydantic/main.py" pos="495:12:14" line-data="        &quot;&quot;&quot;Try to rebuild the pydantic-core schema for the model.">`pydantic-core`</SwmToken> schema for the model. This is necessary when one of the annotations is a <SwmToken path="/pydantic/main.py" pos="497:23:23" line-data="        This may be necessary when one of the annotations is a ForwardRef which could not be resolved during">`ForwardRef`</SwmToken> which could not be resolved during the initial attempt to build the schema, and automatic rebuilding fails.
 
 ```python
     def model_rebuild(
@@ -97,7 +140,7 @@ The function `model_rebuild` is used to rebuild the Pydantic-core schema for the
 
 # Completing the model class
 
-The function `complete_model_class` is used to finish building a model class. This logic must be called after class has been created since validation functions must be bound and `get_type_hints` requires a class object.
+The function <SwmToken path="/pydantic/_internal/_model_construction.py" pos="487:2:2" line-data="def complete_model_class(">`complete_model_class`</SwmToken> is used to finish building a model class. This logic must be called after class has been created since validation functions must be bound and <SwmToken path="/pydantic/_internal/_model_construction.py" pos="499:4:4" line-data="    and `get_type_hints` requires a class object.">`get_type_hints`</SwmToken> requires a class object.
 
 ```python
 def complete_model_class(
@@ -133,7 +176,7 @@ def complete_model_class(
 
 # Cleaning the schema
 
-The function `clean_schema` is used to clean the schema. It collects definitions, simplifies schema references, and applies discriminators to the schema.
+The function <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="446:3:3" line-data="    def clean_schema(self, schema: CoreSchema) -&gt; CoreSchema:">`clean_schema`</SwmToken> is used to clean the schema. It collects definitions, simplifies schema references, and applies discriminators to the schema.
 
 ```python
     def clean_schema(self, schema: CoreSchema) -> CoreSchema:
@@ -156,7 +199,7 @@ The function `clean_schema` is used to clean the schema. It collects definitions
 
 # Simplifying schema references
 
-The function `simplify_schema_references` is used to simplify schema references. It collects references, counts references, and inlines references.
+The function <SwmToken path="/pydantic/_internal/_core_utils.py" pos="417:2:2" line-data="def simplify_schema_references(schema: core_schema.CoreSchema) -&gt; core_schema.CoreSchema:  # noqa: C901">`simplify_schema_references`</SwmToken> is used to simplify schema references. It collects references, counts references, and inlines references.
 
 ```python
 def simplify_schema_references(schema: core_schema.CoreSchema) -> core_schema.CoreSchema:  # noqa: C901
@@ -192,7 +235,7 @@ def simplify_schema_references(schema: core_schema.CoreSchema) -> core_schema.Co
 
 # Collecting definitions
 
-The function `collect_definitions` is used to collect definitions in the schema. It checks if the schema has a reference and if so, it adds it to the definitions.
+The function <SwmToken path="/pydantic/_internal/_generate_schema.py" pos="455:3:3" line-data="    def collect_definitions(self, schema: CoreSchema) -&gt; CoreSchema:">`collect_definitions`</SwmToken> is used to collect definitions in the schema. It checks if the schema has a reference and if so, it adds it to the definitions.
 
 ```python
     def collect_definitions(self, schema: CoreSchema) -> CoreSchema:
@@ -211,13 +254,13 @@ The function `collect_definitions` is used to collect definitions in the schema.
 
 </SwmSnippet>
 
-<SwmSnippet path="/pydantic/_internal/_discriminated_union.py" line="2835">
+<SwmSnippet path="/pydantic/_internal/_discriminated_union.py" line="2">
 
 ---
 
 # Applying discriminators
 
-The function `_convert_schema` is used to convert the schema. It checks if the schema is a union and if so, it generates a tagged union schema.
+The function <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken> is used to convert the schema. It checks if the schema is a union and if so, it generates a tagged union schema.
 
 ```python
 
@@ -231,4 +274,4 @@ The function `_convert_schema` is used to convert the schema. It checks if the s
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1weWRhbnRpYyUzQSUzQWdpbGFkbmF2b3Q=" repo-name="DEMO-pydantic" doc-type="flows"><sup>Powered by [Swimm](/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1weWRhbnRpYyUzQSUzQWdpbGFkbmF2b3Q=" repo-name="DEMO-pydantic"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

@@ -31,6 +31,26 @@ graph TD;
 
  classDef mainFlowStyle color:#000000,fill:#7CB9F4
   classDef rootsStyle color:#000000,fill:#00FFF4
+
+%% Swimm:
+%% graph TD;
+%%   inner:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_discriminated_union.py" pos="61:2:2" line-data="def apply_discriminator(">`apply_discriminator`</SwmToken>
+%%   apply_discriminator:::mainFlowStyle --> <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken>
+%%   apply_discriminator:::mainFlowStyle --> apply
+%%   <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken> --> <SwmToken path="/pydantic/types.py" pos="2841:7:7" line-data="            original_schema = core_schema.union_schema([original_schema])">`union_schema`</SwmToken>
+%%   apply:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="1090:3:3" line-data="    def nullable_schema(self, schema: core_schema.NullableSchema) -&gt; JsonSchemaValue:">`nullable_schema`</SwmToken>
+%%   apply:::mainFlowStyle --> <SwmToken path="/pydantic/types.py" pos="2839:12:12" line-data="            # `pydantic._internal._discriminated_union._ApplyInferredDiscriminator._apply_to_root`, namely,">`_apply_to_root`</SwmToken>
+%%   _apply_to_root:::mainFlowStyle --> <SwmToken path="/pydantic/types.py" pos="2841:7:7" line-data="            original_schema = core_schema.union_schema([original_schema])">`union_schema`</SwmToken>
+%%   _apply_to_root:::mainFlowStyle --> <SwmToken path="/pydantic/_internal/_discriminated_union.py" pos="233:5:5" line-data="            #   to tagged_union_schema below">`tagged_union_schema`</SwmToken>
+%%   tagged_union_schema:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="445:3:3" line-data="    def generate_inner(self, schema: CoreSchemaOrField) -&gt; JsonSchemaValue:  # noqa: C901">`generate_inner`</SwmToken>
+%%   generate_inner:::mainFlowStyle --> <SwmToken path="/pydantic/json_schema.py" pos="481:3:3" line-data="        def convert_to_all_of(json_schema: JsonSchemaValue) -&gt; JsonSchemaValue:">`convert_to_all_of`</SwmToken>
+%%   convert_to_all_of:::mainFlowStyle --> copy
+%%   copy:::mainFlowStyle --> dict
+%%   dict:::mainFlowStyle --> <SwmToken path="/pydantic/main.py" pos="325:3:3" line-data="    def model_dump(">`model_dump`</SwmToken>
+%%   model_dump:::mainFlowStyle --> ...
+%% 
+%%  classDef mainFlowStyle color:#000000,fill:#7CB9F4
+%%   classDef rootsStyle color:#000000,fill:#00FFF4
 ```
 
 <SwmSnippet path="/pydantic/_internal/_discriminated_union.py" line="61">
@@ -39,7 +59,7 @@ graph TD;
 
 # Applying the discriminator
 
-The function `apply_discriminator` is used to apply the discriminator and returns a new core schema. It takes in the schema, discriminator, and definitions as arguments.
+The function <SwmToken path="/pydantic/_internal/_discriminated_union.py" pos="61:2:2" line-data="def apply_discriminator(">`apply_discriminator`</SwmToken> is used to apply the discriminator and returns a new core schema. It takes in the schema, discriminator, and definitions as arguments.
 
 ```python
 def apply_discriminator(
@@ -75,7 +95,7 @@ def apply_discriminator(
 
 # Converting the schema
 
-The function `_convert_schema` is used to convert the original schema into a `TaggedUnionSchema`. It checks if the original schema type is not 'union' and if so, packages the generated schema back into a single-item union.
+The function <SwmToken path="/pydantic/types.py" pos="2835:3:3" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`_convert_schema`</SwmToken> is used to convert the original schema into a <SwmToken path="/pydantic/types.py" pos="2835:20:20" line-data="    def _convert_schema(self, original_schema: core_schema.CoreSchema) -&gt; core_schema.TaggedUnionSchema:">`TaggedUnionSchema`</SwmToken>. It checks if the original schema type is not 'union' and if so, packages the generated schema back into a <SwmToken path="/pydantic/types.py" pos="2837:19:21" line-data="            # This likely indicates that the schema was a single-item union that was simplified.">`single-item`</SwmToken> union.
 
 ```python
     def _convert_schema(self, original_schema: core_schema.CoreSchema) -> core_schema.TaggedUnionSchema:
@@ -111,7 +131,7 @@ The function `_convert_schema` is used to convert the original schema into a `Ta
 
 # Generating a nullable schema
 
-The function `nullable_schema` is used to generate a JSON schema that matches a schema that allows null values.
+The function <SwmToken path="/pydantic/json_schema.py" pos="1090:3:3" line-data="    def nullable_schema(self, schema: core_schema.NullableSchema) -&gt; JsonSchemaValue:">`nullable_schema`</SwmToken> is used to generate a JSON schema that matches a schema that allows null values.
 
 ```python
     def nullable_schema(self, schema: core_schema.NullableSchema) -> JsonSchemaValue:
@@ -144,7 +164,7 @@ The function `nullable_schema` is used to generate a JSON schema that matches a 
 
 # Creating a union schema
 
-The function `union_schema` is used to generate a JSON schema that matches a schema that allows values matching any of the given schemas.
+The function <SwmToken path="/pydantic/json_schema.py" pos="1109:3:3" line-data="    def union_schema(self, schema: core_schema.UnionSchema) -&gt; JsonSchemaValue:">`union_schema`</SwmToken> is used to generate a JSON schema that matches a schema that allows values matching any of the given schemas.
 
 ```python
     def union_schema(self, schema: core_schema.UnionSchema) -> JsonSchemaValue:
@@ -180,7 +200,7 @@ The function `union_schema` is used to generate a JSON schema that matches a sch
 
 # Generating inner schema
 
-The function `generate_inner` is used to generate a JSON schema based on the input schema.
+The function <SwmToken path="/pydantic/json_schema.py" pos="445:3:3" line-data="    def generate_inner(self, schema: CoreSchemaOrField) -&gt; JsonSchemaValue:  # noqa: C901">`generate_inner`</SwmToken> is used to generate a JSON schema based on the input schema.
 
 ```python
     def generate_inner(self, schema: CoreSchemaOrField) -> JsonSchemaValue:  # noqa: C901
@@ -216,7 +236,7 @@ The function `generate_inner` is used to generate a JSON schema based on the inp
 
 # Converting to all_of schema
 
-The function `convert_to_all_of` is used to convert the JSON schema to an all_of schema if it contains a '$ref' and other keys.
+The function <SwmToken path="/pydantic/json_schema.py" pos="481:3:3" line-data="        def convert_to_all_of(json_schema: JsonSchemaValue) -&gt; JsonSchemaValue:">`convert_to_all_of`</SwmToken> is used to convert the JSON schema to an all_of schema if it contains a '$ref' and other keys.
 
 ```python
         def convert_to_all_of(json_schema: JsonSchemaValue) -> JsonSchemaValue:
@@ -239,7 +259,7 @@ The function `convert_to_all_of` is used to convert the JSON schema to an all_of
 
 # Copying the model
 
-The function `copy` is used to return a copy of the model. It takes in include, exclude, update, and deep as arguments.
+The function <SwmToken path="/pydantic/main.py" pos="1251:3:3" line-data="    def copy(">`copy`</SwmToken> is used to return a copy of the model. It takes in include, exclude, update, and deep as arguments.
 
 ````python
     def copy(
@@ -275,7 +295,7 @@ The function `copy` is used to return a copy of the model. It takes in include, 
 
 # Dumping the model as a dictionary
 
-The function `model_dump` is used to generate a dictionary representation of the model, optionally specifying which fields to include or exclude.
+The function <SwmToken path="/pydantic/main.py" pos="325:3:3" line-data="    def model_dump(">`model_dump`</SwmToken> is used to generate a dictionary representation of the model, optionally specifying which fields to include or exclude.
 
 ```python
     def model_dump(
@@ -309,4 +329,4 @@ The function `model_dump` is used to generate a dictionary representation of the
 
 *This is an auto-generated document by Swimm AI 🌊 and has not yet been verified by a human*
 
-<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1weWRhbnRpYyUzQSUzQWdpbGFkbmF2b3Q=" repo-name="DEMO-pydantic" doc-type="flows"><sup>Powered by [Swimm](/)</sup></SwmMeta>
+<SwmMeta version="3.0.0" repo-id="Z2l0aHViJTNBJTNBREVNTy1weWRhbnRpYyUzQSUzQWdpbGFkbmF2b3Q=" repo-name="DEMO-pydantic"><sup>Powered by [Swimm](https://app.swimm.io/)</sup></SwmMeta>

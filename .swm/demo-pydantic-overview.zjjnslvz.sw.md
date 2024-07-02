@@ -20,6 +20,7 @@ The core of data validation in Pydantic is handled by the <SwmToken path="/pydan
 - <SwmLink doc-title="Understanding Core Data Validation">[Understanding Core Data Validation](/.swm/understanding-core-data-validation.yx4ramb1.sw.md)</SwmLink>
 - <SwmLink doc-title="Overview of the BaseModel Class">[Overview of the BaseModel Class](/.swm/overview-of-the-basemodel-class.mr4w3.sw.md)</SwmLink>
 - <SwmLink doc-title="Getting Started with the Validate Call Decorator">[Getting Started with the Validate Call Decorator](/.swm/getting-started-with-the-validate-call-decorator.3lbqta8g.sw.md)</SwmLink>
+- <SwmLink doc-title="Pydantics Core Schema Generation and Validation">[Pydantics Core Schema Generation and Validation](/.swm/pydantics-core-schema-generation-and-validation.uf9wfz2p.sw.md)</SwmLink>
 
 ### Data Validation - Advanced
 
@@ -27,8 +28,7 @@ Advanced data validation in Pydantic allows for more complex validation logic to
 
 - <SwmLink doc-title="Advanced Data Validation in Pydantic">[Advanced Data Validation in Pydantic](/.swm/advanced-data-validation-in-pydantic.hd57io1m.sw.md)</SwmLink>
 - <SwmLink doc-title="Generic Root Validator Creation in Pydantic">[Generic Root Validator Creation in Pydantic](/.swm/generic-root-validator-creation-in-pydantic.d8xoht7p.sw.md)</SwmLink>
-- <SwmLink doc-title="Data Validation in Pydantic">[Data Validation in Pydantic](/.swm/data-validation-in-pydantic.129j1puy.sw.md)</SwmLink>
-- &nbsp;
+- <SwmLink doc-title="Data Validation Flow">[Data Validation Flow](/.swm/data-validation-flow.129j1puy.sw.md)</SwmLink>
 - **Class Validators**
   - <SwmLink doc-title="Exploring the interaction between class validator functions and Pydantic data models">[Exploring the interaction between class validator functions and Pydantic data models](/.swm/exploring-the-interaction-between-class-validator-functions-and-pydantic-data-models.9hyp596j.sw.md)</SwmLink>
   - <SwmLink doc-title="Defining the role of class validators in Pydantics data validation">[Defining the role of class validators in Pydantics data validation](/.swm/defining-the-role-of-class-validators-in-pydantics-data-validation.1ibh7jra.sw.md)</SwmLink>
@@ -39,10 +39,11 @@ Advanced data validation in Pydantic allows for more complex validation logic to
 Type handling in Pydantic involves the use of Python's type hints to validate data. Pydantic provides several built-in types and allows for the creation of custom types. The library uses these types to validate data when creating instances of data classes. This ensures that the data conforms to the expected structure and type, reducing the likelihood of runtime errors due to incorrect data types or structures.
 
 - <SwmLink doc-title="Getting Started with Type Handling">[Getting Started with Type Handling](/.swm/getting-started-with-type-handling.n25dluos.sw.md)</SwmLink>
-- <SwmLink doc-title="\_SecretField Class Overview">[\_SecretField Class Overview](/.swm/_secretfield-class-overview.3mwn1.sw.md)</SwmLink>
+- <SwmLink doc-title="\\\\\\\_SecretField Class Overview">[\_SecretField Class Overview](/.swm/_secretfield-class-overview.3mwn1.sw.md)</SwmLink>
 - <SwmLink doc-title="Overview of EncodedBytes">[Overview of EncodedBytes](/.swm/overview-of-encodedbytes.7d4t8.sw.md)</SwmLink>
 - <SwmLink doc-title="Understanding Basic Type Definitions">[Understanding Basic Type Definitions](/.swm/understanding-basic-type-definitions.mdgf21vb.sw.md)</SwmLink>
 - <SwmLink doc-title="Getting started with Complex Type Definitions">[Getting started with Complex Type Definitions](/.swm/getting-started-with-complex-type-definitions.sdbvob5y.sw.md)</SwmLink>
+- <SwmLink doc-title="Pydantics Type Adapter Serialization">[Pydantics Type Adapter Serialization](/.swm/pydantics-type-adapter-serialization.dof0jhvm.sw.md)</SwmLink>
 
 ### JSON Processing
 
@@ -50,6 +51,7 @@ JSON processing in Pydantic involves validating, serializing, and deserializing 
 
 - <SwmLink doc-title="Understanding JSON Processing">[Understanding JSON Processing](/.swm/understanding-json-processing.uvksorqe.sw.md)</SwmLink>
 - <SwmLink doc-title="Understanding JSON Schema">[Understanding JSON Schema](/.swm/understanding-json-schema.u88bxbkh.sw.md)</SwmLink>
+- <SwmLink doc-title="JSON Schema Generation in Pydantic">[JSON Schema Generation in Pydantic](/.swm/json-schema-generation-in-pydantic.8jebx0se.sw.md)</SwmLink>
 - **JSON Validation**
   - <SwmLink doc-title="Introduction to JSON Validation">[Introduction to JSON Validation](/.swm/introduction-to-json-validation.ancunlwh.sw.md)</SwmLink>
   - <SwmLink doc-title="Major Differences between Pydantic V1.10 and V2: The Need for Backward Compatibility">[Major Differences between Pydantic V1.10 and V2: The Need for Backward Compatibility](/.swm/major-differences-between-pydantic-v110-and-v2-the-need-for-backward-compatibility.xwq0t7p9.sw.md)</SwmLink>
@@ -77,37 +79,22 @@ The <SwmPath>[pydantic/plugin/](/pydantic/plugin/)</SwmPath> directory contains 
 ### Experimental
 
 The <SwmPath>[pydantic/experimental/](/pydantic/experimental/)</SwmPath> directory contains experimental features of the Pydantic library.
+Experimental features in Pydantic are potential new functionalities that are currently being tested and refined. They are not stable and may undergo significant changes or even removal. These features are housed in the 'experimental' module of Pydantic. This module is explicitly marked as experimental to warn users about the potential instability and changes in its features. The code in this module, such as the pipeline API functionality, is subject to change and should be used with caution.
 
 - <SwmLink doc-title="Introduction to Pydantic Experimental Features">[Introduction to Pydantic Experimental Features](/.swm/introduction-to-pydantic-experimental-features.sokvvb1b.sw.md)</SwmLink>
-- <SwmLink doc-title="Dataclass Creation in Pydantic">[Dataclass Creation in Pydantic](/.swm/dataclass-creation-in-pydantic.k8x8c1vq.sw.md)</SwmLink>
-- <SwmLink doc-title="Rebuilding a Dataclass in Pydantic">[Rebuilding a Dataclass in Pydantic](/.swm/rebuilding-a-dataclass-in-pydantic.rz5r1d8p.sw.md)</SwmLink>
-- <SwmLink doc-title="Data Validation in Pydantic">[Data Validation in Pydantic](/.swm/data-validation-in-pydantic.7eczdv9c.sw.md)</SwmLink>
-- <SwmLink doc-title="Schema Generation in Pydantic">[Schema Generation in Pydantic](/.swm/schema-generation-in-pydantic.azljdius.sw.md)</SwmLink>
-- <SwmLink doc-title="Schema Generation in Pydantic">[Schema Generation in Pydantic](/.swm/schema-generation-in-pydantic.m17qonxq.sw.md)</SwmLink>
-- <SwmLink doc-title="Model Rebuilding and Schema Generation">[Model Rebuilding and Schema Generation](/.swm/model-rebuilding-and-schema-generation.fs62tkos.sw.md)</SwmLink>
-- <SwmLink doc-title="Update Forward References in Pydantic">[Update Forward References in Pydantic](/.swm/update-forward-references-in-pydantic.pkxlt2ja.sw.md)</SwmLink>
-- &nbsp;
-- <SwmLink doc-title="Pydantics Data Validation Flow">[Pydantics Data Validation Flow](/.swm/pydantics-data-validation-flow.eme6jvha.sw.md)</SwmLink>
-- &nbsp;
-- <SwmLink doc-title="Data Validation in Pydantic">[Data Validation in Pydantic](/.swm/data-validation-in-pydantic.fgauk6gq.sw.md)</SwmLink>
-- <SwmLink doc-title="Pydantics Core Schema Generation and Validation">[Pydantics Core Schema Generation and Validation](/.swm/pydantics-core-schema-generation-and-validation.uf9wfz2p.sw.md)</SwmLink>
-- <SwmLink doc-title="Pydantics Type Adapter Serialization">[Pydantics Type Adapter Serialization](/.swm/pydantics-type-adapter-serialization.dof0jhvm.sw.md)</SwmLink>
-- <SwmLink doc-title="Schema Generation in Pydantic">[Schema Generation in Pydantic](/.swm/schema-generation-in-pydantic.7tq516w5.sw.md)</SwmLink>
-- <SwmLink doc-title="Applying a Discriminator to a Schema">[Applying a Discriminator to a Schema](/.swm/applying-a-discriminator-to-a-schema.lm4pdntn.sw.md)</SwmLink>
-- <SwmLink doc-title="Discriminator Application in Pydantic">[Discriminator Application in Pydantic](/.swm/discriminator-application-in-pydantic.nrjr28pd.sw.md)</SwmLink>
-- <SwmLink doc-title="Pydantic Annotations and JSON Schema Generation">[Pydantic Annotations and JSON Schema Generation](/.swm/pydantic-annotations-and-json-schema-generation.q7ac8d9c.sw.md)</SwmLink>
-- <SwmLink doc-title="JSON Schema Generation in Pydantic">[JSON Schema Generation in Pydantic](/.swm/json-schema-generation-in-pydantic.8jebx0se.sw.md)</SwmLink>
-- <SwmLink doc-title="Getting Pydantic Core Schema">[Getting Pydantic Core Schema](/.swm/getting-pydantic-core-schema.58dgzail.sw.md)</SwmLink>
-- <SwmLink doc-title="\_FromFieldInfoInputs Overview">[\_FromFieldInfoInputs Overview](/.swm/_fromfieldinfoinputs-overview.nbqcy.sw.md)</SwmLink>
-- <SwmLink doc-title="Overview of PydanticMetadata">[Overview of PydanticMetadata](/.swm/overview-of-pydanticmetadata.nc2w5.sw.md)</SwmLink>
-- <SwmLink doc-title="Overview of the GetCoreSchemaHandler Class">[Overview of the GetCoreSchemaHandler Class](/.swm/overview-of-the-getcoreschemahandler-class.ys9w5.sw.md)</SwmLink>
-- <SwmLink doc-title="Overview of StandardDataclass in Pydantic">[Overview of StandardDataclass in Pydantic](/.swm/overview-of-standarddataclass-in-pydantic.a61oo.sw.md)</SwmLink>
 
-### Depracated
+### Deprecated Features
+
+Deprecated features are parts of the codebase that are no longer recommended for use and are likely to be removed in future versions. In Pydantic, these features are marked with a special warning called <SwmToken path="/pydantic/deprecated/tools.py" pos="16:1:1" line-data="    DeprecationWarning = PydanticDeprecatedSince20">`DeprecationWarning`</SwmToken>, which is an alias for <SwmToken path="/pydantic/warnings.py" pos="49:2:2" line-data="class PydanticDeprecatedSince20(PydanticDeprecationWarning):">`PydanticDeprecatedSince20`</SwmToken>. This warning is used across different modules in the <SwmPath>[pydantic/deprecated//](/pydantic/deprecated//)</SwmPath> directory to indicate deprecated features. For instance, the <SwmToken path="/pydantic/v1/config.py" pos="80:2:2" line-data="class BaseConfig:">`BaseConfig`</SwmToken> class in <SwmPath>[pydantic/deprecated/config.py](/pydantic/deprecated/config.py)</SwmPath> is marked as deprecated and any attempt to use it will trigger a <SwmToken path="/pydantic/deprecated/tools.py" pos="16:1:1" line-data="    DeprecationWarning = PydanticDeprecatedSince20">`DeprecationWarning`</SwmToken>. Developers are advised to avoid using deprecated features and to migrate their code to use the recommended alternatives.
 
 - <SwmLink doc-title="PydanticDeprecationWarning Overview">[PydanticDeprecationWarning Overview](/.swm/pydanticdeprecationwarning-overview.kqb4e.sw.md)</SwmLink>
 - <SwmLink doc-title="Protocol Class Overview">[Protocol Class Overview](/.swm/protocol-class-overview.03g5n.sw.md)</SwmLink>
-- &nbsp;
+
+### Classes
+
+- <SwmLink doc-title="Overview of the GetCoreSchemaHandler Class">[Overview of the GetCoreSchemaHandler Class](/.swm/overview-of-the-getcoreschemahandler-class.ys9w5.sw.md)</SwmLink>
+- <SwmLink doc-title="Overview of StandardDataclass in Pydantic">[Overview of StandardDataclass in Pydantic](/.swm/overview-of-standarddataclass-in-pydantic.a61oo.sw.md)</SwmLink>
+- <SwmLink doc-title="Overview of PydanticMetadata">[Overview of PydanticMetadata](/.swm/overview-of-pydanticmetadata.nc2w5.sw.md)</SwmLink>
 
 ### Flows
 
@@ -115,6 +102,8 @@ The <SwmPath>[pydantic/experimental/](/pydantic/experimental/)</SwmPath> directo
 - <SwmLink doc-title="IP Preparation in Pydantic">[IP Preparation in Pydantic](/.swm/ip-preparation-in-pydantic.zrws5of9.sw.md)</SwmLink>
 - <SwmLink doc-title="JSON Schema Generation in Pydantic">[JSON Schema Generation in Pydantic](/.swm/json-schema-generation-in-pydantic.sovrr636.sw.md)</SwmLink>
 - <SwmLink doc-title="BaseModel Subclass Configuration">[BaseModel Subclass Configuration](/.swm/basemodel-subclass-configuration.e7vnz1s3.sw.md)</SwmLink>
+- <SwmLink doc-title="Update Forward References in Pydantic">[Update Forward References in Pydantic](/.swm/update-forward-references-in-pydantic.pkxlt2ja.sw.md)</SwmLink>
+- <SwmLink doc-title="Discriminator Application in Pydantic">[Discriminator Application in Pydantic](/.swm/discriminator-application-in-pydantic.nrjr28pd.sw.md)</SwmLink>
 
 ## Build Tools
 
